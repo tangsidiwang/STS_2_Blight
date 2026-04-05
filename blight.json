@@ -1,0 +1,11 @@
+{
+  "id": "blight",           
+  "name": "荒疫",
+  "author": "tongs",
+  "description": "荒疫再临",
+  "version": "1.0",
+  "has_pck": false,        
+  "has_dll": true,        
+  "dependencies": [],     
+  "affects_gameplay": true
+}
