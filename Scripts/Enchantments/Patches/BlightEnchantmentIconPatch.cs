@@ -240,7 +240,7 @@ namespace BlightMod.Enchantments.Patches
             }
             if(id.Entry.Equals("BLIGHT_FAVORED_ENCHANTMENT", StringComparison.Ordinal))
             {
-                __result = ModelDb.Enchantment<Favored>().Icon;
+                __result = ModelDb.Enchantment<CustomEnchantments.BlightFavoredEnchantment>().Icon;
 
                 return false;
             }

@@ -9,6 +9,7 @@ using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Monsters;
+using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.MonsterMoves.Intents;
 using MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine;
 
@@ -53,7 +54,7 @@ public sealed class ChomperBlightAI : IBlightMonsterAI
     private static async Task ScreechMove(Chomper chomper, IReadOnlyList<Creature> targets)
     {
         LocString line = MonsterModel.L10NMonsterLookup("CHOMPER.moves.SCREECH.title");
-        TalkCmd.Play(line, chomper.Creature);
+        TalkCmd.Play(line, chomper.Creature, VfxColor.Purple, VfxDuration.Short);
         string castSfx = (string)AccessTools.Property(typeof(MonsterModel), "CastSfx")!.GetValue(chomper)!;
         SfxCmd.Play(castSfx);
         await CreatureCmd.TriggerAnim(chomper.Creature, "Cast", 1f);

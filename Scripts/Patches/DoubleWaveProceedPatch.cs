@@ -45,7 +45,6 @@ namespace BlightMod.Patches
                 __result = TaskHelper.RunSafely(__instance.EnterMapPointInternal(
                     currentCoord.Value.row + 1,
                     currentPoint.PointType,
-                    currentCoord,
                     preFinishedRoom: null,
                     saveGame: true));
                 return false;
@@ -276,7 +275,6 @@ namespace BlightMod.Patches
                 await RunManager.Instance.EnterMapPointInternal(
                     currentCoord.row + 1,
                     pointType,
-                    currentCoord,
                     preFinishedRoom: null,
                     saveGame: true);
             }
