@@ -124,7 +124,8 @@ namespace BlightMod.Patches
         }
     }
 
-    [HarmonyPatch(typeof(StartRunLobby), "BeginRun")]
+    [HarmonyPatch(typeof(StartRunLobby), "BeginRunLocally")]
+    [HarmonyPatch(typeof(StartRunLobby), "BeginRunForAllPlayers")]
     public static class StartRunLobbyBeginRunPatch
     {
         public static void Prefix(ref List<ModifierModel> modifiers)

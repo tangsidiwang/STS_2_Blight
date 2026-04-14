@@ -47,7 +47,7 @@ public static class MutantVisualShaderController
 			return;
 		}
 
-		ApplyRecursively(visuals.Body);
+		ApplyRecursively(visuals.GetCurrentBody());
 	}
 
 	private static void ApplyToSpine(MegaSprite spineBody)

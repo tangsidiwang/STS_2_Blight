@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Monsters;
 using MegaCrit.Sts2.Core.Models.Powers;
+using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.MonsterMoves.Intents;
 using MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine;
 
@@ -47,7 +48,7 @@ public sealed class GremlinMercBlightAI : IBlightMonsterAI
                     {
                         _hasSpoken = true;
                         LocString line = MonsterModel.L10NMonsterLookup("GREMLIN_MERC.moves.GIMME.banter");
-                        TalkCmd.Play(line, gremlinMerc.Creature);
+                        TalkCmd.Play(line, gremlinMerc.Creature, VfxColor.Purple, VfxDuration.Short);
                     }
 
                     VfxCmd.PlayOnCreatureCenters(targets, "vfx/vfx_coin_explosion_regular");
@@ -76,7 +77,7 @@ public sealed class GremlinMercBlightAI : IBlightMonsterAI
                     {
                         _hasSpoken = true;
                         LocString line = MonsterModel.L10NMonsterLookup("GREMLIN_MERC.moves.GIMME.banter");
-                        TalkCmd.Play(line, gremlinMerc.Creature);
+                        TalkCmd.Play(line, gremlinMerc.Creature, VfxColor.Purple, VfxDuration.Short);
                     }
 
                     VfxCmd.PlayOnCreatureCenters(targets, "vfx/vfx_coin_explosion_regular");
